@@ -1,0 +1,28 @@
+<h2><marquee>Requested Assets</marquee></h2>
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>Employee Name</th>
+            <th>Role</th>
+            <th>Asset Required</th>
+            <th>Address</th>
+            <th>Mobile Number</th>
+            <th>Email Id</th>
+        
+        </tr>
+        
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of employees">
+            <td>{{employee.empName}}</td>
+                <td>{{employee.role}}</td>
+                    <td>{{employee.assetRequired}}</td>
+                        <td>{{employee.address}}</td>
+                            <td>{{employee.contactNu}}</td>
+                                <td>{{employee.emailId}}</td>
+                                <td><button class="btn btn-info">Accept</button>
+                                    <button  (click) = deleteRequest(employee.id) class="btn btn-danger" style="margin-left: 10px">Reject</button></td>
+
+        </tr>
+    </tbody>
+</table>
